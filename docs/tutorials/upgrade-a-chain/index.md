@@ -11,19 +11,19 @@ it possible to deploy enhanced runtime capabilities (including _breaking_ change
 [hard fork](../../knowledgebase/getting-started/glossary#fork). Because the definition of the
 runtime is itself an element in a Substrate chain's state, network participants may update this
 value by way of an [extrinsic](../../knowledgebase/learn-substrate/extrinsics),
-[the `set_code` function](https://substrate.dev/rustdocs/v2.0.0/frame_system/enum.Call.html#variant.set_code).
+[the `set_code` function](https://substrate.dev/rustdocs/v3.0.0/frame_system/enum.Call.html#variant.set_code).
 Since updates to runtime state are bound by the blockchain's consensus mechanisms and cryptographic
 guarantees, network participants can use the blockchain itself to trustlessly distribute updated or
 extended runtime logic without needing to fork the chain or even release a new blockchain client.
 
 This tutorial will use the Substrate Developer Hub
-[Node Template](https://github.com/substrate-developer-hub/substrate-node-template) to explore two
-mechanisms for forkless upgrades of [FRAME](../../knowledgebase/runtime/frame)-based runtimes.
-First, the
-[`sudo_unchecked_weight`](https://substrate.dev/rustdocs/v2.0.0/pallet_sudo/enum.Call.html#variant.sudo_unchecked_weight)
+[Node Template](https://github.com/substrate-developer-hub/substrate-node-template/tree/v3.0.0) to
+explore two mechanisms for forkless upgrades of [FRAME](../../knowledgebase/runtime/frame)-based
+runtimes. First, the
+[`sudo_unchecked_weight`](https://substrate.dev/rustdocs/v3.0.0/pallet_sudo/enum.Call.html#variant.sudo_unchecked_weight)
 function from the [Sudo pallet](../../knowledgebase/runtime/frame#sudo) will be used to perform an
 upgrade that adds the [Scheduler pallet](../../knowledgebase/runtime/frame#scheduler). Then, the
-[`schedule`](https://substrate.dev/rustdocs/v2.0.0/pallet_scheduler/enum.Call.html#variant.schedule)
+[`schedule`](https://substrate.dev/rustdocs/v3.0.0/pallet_scheduler/enum.Call.html#variant.schedule)
 function from the Scheduler pallet will be used to perform an upgrade that increases the
 [existential (minimum) balance](../../knowledgebase/getting-started/glossary#existential-deposit)
 for network accounts.
@@ -45,6 +45,6 @@ will guide you through the process of setting up your development environment. T
 system for runtime development and guide you through the process of extending the capabilities of a
 FRAME runtime by adding a pallet. If you're an experienced developer and wish to skip those
 tutorials, you can clone the
-[Node Template repository](https://github.com/substrate-developer-hub/substrate-node-template) and
-refer to the
-[documentation for local development](https://github.com/substrate-developer-hub/substrate-node-template#local-development).
+[Node Template repository](https://github.com/substrate-developer-hub/substrate-node-template/tree/v3.0.0)
+and refer to the
+[Getting Started documentation](https://github.com/substrate-developer-hub/substrate-node-template/tree/v3.0.0#getting-started).

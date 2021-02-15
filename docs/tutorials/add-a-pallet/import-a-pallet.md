@@ -39,14 +39,14 @@ runtime's `Cargo.toml` file. If you want a proper primer into Cargo References, 
 
 Open `substrate-node-template/runtime/Cargo.toml` and you will see a list of all the dependencies
 your runtime has. For example, it depends on the
-[Balances pallet](https://substrate.dev/rustdocs/v2.0.0):
+[Balances pallet](https://substrate.dev/rustdocs/v3.0.0):
 
 **`runtime/Cargo.toml`**
 
 ```TOML
 [dependencies]
 #--snip--
-pallet-balances = { default-features = false, version = '2.0.0' }
+pallet-balances = { default-features = false, version = '3.0.0' }
 ```
 
 ### Crate Features
@@ -130,7 +130,7 @@ So based on the `balances` import shown above, the `nicks` import will look like
 ```TOML
 [dependencies]
 #--snip--
-pallet-nicks = { default-features = false, version = '2.0.0' }
+pallet-nicks = { default-features = false, version = '3.0.0' }
 ```
 
 As with other pallets, the Nicks pallet has an `std` feature. We should build its `std` feature
